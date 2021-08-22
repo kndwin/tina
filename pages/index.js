@@ -5,54 +5,63 @@ import Typist from "react-text-typist";
 import Image from "next/image";
 import Link from "next/link";
 
+import AnxietyAndMePic from '../public/landing-page/anxiety-and-me.png'
+import SparxLabPic from '../public/landing-page/sparx-lab-display.png'
+import AffordablePic from '../public/landing-page/affordable-display.png'
+import CalendarPic from '../public/landing-page/calendar-display.png'
+import Anatomic4dPic from '../public/landing-page/anatomic4d-display.jpg'
+import OrangeSkyPic from '../public/landing-page/orange-sky-display.png'
+import LittleUnwellPic from '../public/landing-page/little-unwell-display.png'
+import MoonlightPic from '../public/landing-page/moonlight-display.jpg'
+
 export default function Home() {
   const projects = [
     {
       title: "Anxiety and Me",
       type: "Book cover design",
-      image: "/landing-page/anxiety-and-me.png",
+      image: AnxietyAndMePic,
       url: "/projects/anxiety-and-me",
     },
     {
       title: "Sparx Lab",
       type: "Brand and Web design",
-      image: "/landing-page/sparx-lab-display.png",
+      image: SparxLabPic,
     },
     {
       title: "Affordable Dentures and Implants",
       type: "Brand and Web Design",
-      image: "/landing-page/affordable-display.png",
+      image: AffordablePic,
     },
     {
       title: "2022 Calendars",
       type: "Calendar Designs",
-      image: "/landing-page/calendar-display.png",
+      image: CalendarPic,
     },
     {
       title: "Anatomic4d",
       type: "Brand and Web Design",
-      image: "/landing-page/anatomic4d-display.jpg",
+      image: Anatomic4dPic,
     },
     {
       title: "Orange Sky Rebrand",
       type: "Project redesignin brand",
-      image: "/landing-page/orange-sky-display.png",
+      image: OrangeSkyPic,
     },
     {
       title: "Little Unwell",
       type: "Project about Mental Health awareness",
-      image: "/landing-page/little-unwell-display.png",
+      image: LittleUnwellPic,
     },
     {
       title: "Moonlight",
       type: "3D Modelling Lamp",
-      image: "/landing-page/moonlight-display.jpg",
+      image: MoonlightPic,
     },
   ];
   return (
     <Layout>
       <Head>
-        <title>Create Next App</title>
+        <title>Tina Dairy</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -110,9 +119,11 @@ export default function Home() {
               <div className='flex flex-col text-left cursor-pointer'>
                 <Image
                   src={image}
-                  layout="responsive"
-                  height={200}
-                  width={300}
+									placeholder='blur'
+									height={200}
+									width={300}
+									layout='responsive'
+									className='object-cover'
                 />
                 <p className="color-primary font-recoleta mt-4">{title}</p>
                 <p className="color-primary font-recoleta mb-8">{type}</p>
