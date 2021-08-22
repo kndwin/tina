@@ -5,14 +5,14 @@ import Typist from "react-text-typist";
 import Image from "next/image";
 import Link from "next/link";
 
-import AnxietyAndMePic from '../public/landing-page/anxiety-and-me.png'
-import SparxLabPic from '../public/landing-page/sparx-lab-display.png'
-import AffordablePic from '../public/landing-page/affordable-display.png'
-import CalendarPic from '../public/landing-page/calendar-display.png'
-import Anatomic4dPic from '../public/landing-page/anatomic4d-display.jpg'
-import OrangeSkyPic from '../public/landing-page/orange-sky-display.png'
-import LittleUnwellPic from '../public/landing-page/little-unwell-display.png'
-import MoonlightPic from '../public/landing-page/moonlight-display.jpg'
+import AnxietyAndMePic from "../public/landing-page/anxiety-and-me.png";
+import SparxLabPic from "../public/landing-page/sparx-lab-display.png";
+import AffordablePic from "../public/landing-page/affordable-display.png";
+import CalendarPic from "../public/landing-page/calendar-display.png";
+import Anatomic4dPic from "../public/landing-page/anatomic4d-display.jpg";
+import OrangeSkyPic from "../public/landing-page/orange-sky-display.png";
+import LittleUnwellPic from "../public/landing-page/little-unwell-display.png";
+import MoonlightPic from "../public/landing-page/moonlight-display.jpg";
 
 export default function Home() {
   const projects = [
@@ -94,36 +94,29 @@ export default function Home() {
               Contact me
             </p>
             <div className="flex items-center">
-              <SiGmail
-                className="color-primary cursor-pointer"
-                href="mailto:tinadairy@gmail.com"
-              />
-              <SiLinkedin
-                className="color-primary mx-2 cursor-pointer"
-                href="https://www.linkedin.com/in/tina-nguyen-158931207/"
-              />
-              <SiInstagram
-                className="color-primary cursor-pointer"
-                href="https://www.instagram.com/thetinadairy/"
-              />
+              <a href="mailto:tinadairy@gmail.com">
+                <SiGmail className="color-primary cursor-pointer" />
+              </a>
+              <a href="https://www.linkedin.com/in/tina-nguyen-158931207/">
+                <SiLinkedin className="color-primary mx-2 cursor-pointer" />
+              </a>
+              <a href="https://www.instagram.com/thetinadairy/">
+                <SiInstagram className="color-primary cursor-pointer" />
+              </a>
             </div>
           </div>
         </div>
         <div className="w-full sm:grid grid-cols-2 gap-6 flex flex-col">
           {projects.map(({ title, type, image, url }) => (
-            <Link
-              key={title}
-              className="w-full"
-              href={url ?? '/'}
-            >
-              <div className='flex flex-col text-left cursor-pointer'>
+            <Link key={title} className="w-full" href={url ?? "/"}>
+              <div className="flex flex-col text-left cursor-pointer">
                 <Image
                   src={image}
-									placeholder='blur'
-									height={200}
-									width={300}
-									layout='responsive'
-									className='object-cover'
+                  placeholder="blur"
+                  height={200}
+                  width={300}
+                  layout="responsive"
+                  className="object-cover"
                 />
                 <p className="color-primary font-recoleta mt-4">{title}</p>
                 <p className="color-primary font-recoleta mb-8">{type}</p>
