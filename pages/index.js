@@ -1,82 +1,101 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Layout from "../components/layout";
+import { SiGmail, SiLinkedin, SiInstagram } from "react-icons/si";
+import Typist from 'react-text-typist'
 
 export default function Home() {
+  const projects = [
+    {
+      title: "Anxiety and Me",
+      type: "Book cover design",
+      image: "/landing-page/anxiety-and-me.png",
+    },
+    {
+      title: "Sparx Lab",
+      type: "Brand and Web design",
+      image: "/landing-page/sparx-lab-display.png",
+    },
+    {
+      title: "Affordable Dentures and Implants",
+      type: "Brand and Web Design",
+      image: "/landing-page/affordable-display.png",
+    },
+    {
+      title: "2022 Calendars",
+      type: "Calendar Designs",
+      image: "/landing-page/calendar-display.png",
+    },
+    {
+      title: "Anatomic4d",
+      type: "Brand and Web Design",
+      image: "/landing-page/anatomic4d-display.jpg",
+    },
+    {
+      title: "Orange Sky Rebrand",
+      type: "Project redesignin brand",
+      image: "/landing-page/orange-sky-display.png",
+    },
+    {
+      title: "Little Unwell",
+      type: "Project about Mental Health awareness",
+      image: "/landing-page/little-unwell-display.png",
+    },
+    {
+      title: "Moonlight",
+      type: "3D Modelling Lamp",
+      image: "/landing-page/moonlight-display.jpg",
+    },
+  ];
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <Layout>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <main
+        className="flex flex-col items-center justify-center 
+				container flex-1 px-20 text-center mx-auto px-4 max-w-2xl"
+      >
+        <div className="w-full text-left my-8">
+          <h1 className="font-recoleta color-primary text-3xl">
+            Hello! I'm a designer and I like to <br />
+            <Typist
+              deletingSpeed={65}
+              pauseTime={2000}
+              typingSpeed={80}
+							showCursor={false}
+              sentences={[
+                'design book covers',
+                'design websites',
+                'design 3D models',
+                'design stationery',
+                'design signage',
+								'printmaking',
+								'illustrating'
+              ]}
+              loop={true}
+            />
+          </h1>
+          <div className="flex items-center">
+            <p className="font-recoleta color-primary text-lg mr-2">Contact me</p>
+            <div className="flex items-center">
+              <SiGmail className="color-primary" />
+              <SiLinkedin className="color-primary mx-2" />
+              <SiInstagram className="color-primary" />
+            </div>
+          </div>
+        </div>
+        <div className="w-full sm:grid grid-cols-2 gap-6 flex flex-col">
+          {projects.map(({ title, type, image }) => (
+            <div key={title} className="w-full text-left">
+              <img src={image} alt="" className="w-full h-60 object-cover" />
+              <p className="color-primary font-recoleta mt-4">{title}</p>
+              <p className="color-primary font-recoleta mb-8">{type}</p>
+            </div>
+          ))}
         </div>
       </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
-    </div>
-  )
+    </Layout>
+  );
 }

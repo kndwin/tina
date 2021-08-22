@@ -1,0 +1,31 @@
+@font-face {
+  font-family: Beauty;
+  src: url(../public/fonts/BeautyDemo.ttf);
+}
+
+@font-face {
+  font-family: Recoleta;
+  src: url(../public/fonts/recoleta-regulardemo.otf);
+}
+
+:root {
+  --primary: #e79696;
+  --background: #fffdf8;
+}
+
+html,
+body {
+  background-color: var(--background);
+}
+
+.font-recoleta {
+  font-family: Recoleta;
+}
+
+.font-beauty {
+  font-family: Beauty;
+}
+
+.color-primary {
+  color: var(--primary);
+}
