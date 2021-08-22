@@ -1,7 +1,9 @@
 import Head from "next/head";
 import Layout from "../components/layout";
 import { SiGmail, SiLinkedin, SiInstagram } from "react-icons/si";
-import Typist from 'react-text-typist'
+import Typist from "react-text-typist";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const projects = [
@@ -9,6 +11,7 @@ export default function Home() {
       title: "Anxiety and Me",
       type: "Book cover design",
       image: "/landing-page/anxiety-and-me.png",
+      url: "/projects/anxiety-and-me",
     },
     {
       title: "Sparx Lab",
@@ -64,35 +67,57 @@ export default function Home() {
               deletingSpeed={65}
               pauseTime={2000}
               typingSpeed={80}
-							showCursor={false}
+              showCursor={false}
               sentences={[
-                'design book covers',
-                'design websites',
-                'design 3D models',
-                'design stationery',
-                'design signage',
-								'printmaking',
-								'illustrating'
+                "design book covers",
+                "design websites",
+                "design 3D models",
+                "design stationery",
+                "design signage",
+                "printmake",
+                "illustrate",
               ]}
               loop={true}
             />
           </h1>
-          <div className="flex items-center">
-            <p className="font-recoleta color-primary text-lg mr-2">Contact me</p>
+          <div className="flex items-center mt-4">
+            <p className="font-recoleta color-primary text-lg mr-4">
+              Contact me
+            </p>
             <div className="flex items-center">
-              <SiGmail className="color-primary" />
-              <SiLinkedin className="color-primary mx-2" />
-              <SiInstagram className="color-primary" />
+              <SiGmail
+                className="color-primary cursor-pointer"
+                href="mailto:tinadairy@gmail.com"
+              />
+              <SiLinkedin
+                className="color-primary mx-2 cursor-pointer"
+                href="https://www.linkedin.com/in/tina-nguyen-158931207/"
+              />
+              <SiInstagram
+                className="color-primary cursor-pointer"
+                href="https://www.instagram.com/thetinadairy/"
+              />
             </div>
           </div>
         </div>
         <div className="w-full sm:grid grid-cols-2 gap-6 flex flex-col">
-          {projects.map(({ title, type, image }) => (
-            <div key={title} className="w-full text-left">
-              <img src={image} alt="" className="w-full h-60 object-cover" />
-              <p className="color-primary font-recoleta mt-4">{title}</p>
-              <p className="color-primary font-recoleta mb-8">{type}</p>
-            </div>
+          {projects.map(({ title, type, image, url }) => (
+            <Link
+              key={title}
+              className="w-full"
+              href={url ?? '/'}
+            >
+              <div className='flex flex-col text-left cursor-pointer'>
+                <Image
+                  src={image}
+                  layout="responsive"
+                  height={200}
+                  width={300}
+                />
+                <p className="color-primary font-recoleta mt-4">{title}</p>
+                <p className="color-primary font-recoleta mb-8">{type}</p>
+              </div>
+            </Link>
           ))}
         </div>
       </main>
