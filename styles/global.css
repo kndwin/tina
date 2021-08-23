@@ -29,3 +29,11 @@ body {
 .color-primary {
   color: var(--primary);
 }
+
+.boxshadow  {
+	border: 2px solid var(--primary);
+}
+
+.boxshadow:hover {
+	background-color: var(--primary);
+}

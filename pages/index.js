@@ -110,14 +110,16 @@ export default function Home() {
           {projects.map(({ title, type, image, url }) => (
             <Link key={title} className="w-full" href={url ?? "/"}>
               <div className="flex flex-col text-left cursor-pointer">
-                <Image
-                  src={image}
-                  placeholder="blur"
-                  height={200}
-                  width={300}
-                  layout="responsive"
-                  className="object-cover"
-                />
+								<div className='boxshadow rounded-md w-full h-full p-2'>
+									<Image
+										src={image}
+										placeholder="blur"
+										height={200}
+										width={300}
+										layout="responsive"
+										className="object-cover rounded-md"
+									/>
+								</div>
                 <p className="color-primary font-recoleta mt-4">{title}</p>
                 <p className="color-primary font-recoleta mb-8">{type}</p>
               </div>
