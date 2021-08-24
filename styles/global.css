@@ -30,6 +30,14 @@ body {
   color: var(--primary);
 }
 
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-bg {
+  background-color: var(--background);
+}
+
 .boxshadow  {
 	border: 2px solid var(--primary);
 }

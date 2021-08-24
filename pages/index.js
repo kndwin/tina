@@ -59,18 +59,14 @@ export default function Home() {
     },
   ];
   return (
-    <Layout>
+    <>
       <Head>
         <title>Tina Dairy</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main
-        className="flex flex-col items-center justify-center 
-				container flex-1 px-20 text-center mx-auto px-4 max-w-2xl"
-      >
-        <div className="w-full text-left my-8">
-          <h1 className="font-recoleta color-primary text-3xl">
+        <div className="w-full my-8 text-left">
+          <h1 className="text-3xl font-recoleta color-primary">
             Hello! I'm a designer and I like to <br />
             <Typist
               deletingSpeed={65}
@@ -90,27 +86,27 @@ export default function Home() {
             />
           </h1>
           <div className="flex items-center mt-4">
-            <p className="font-recoleta color-primary text-lg mr-4">
+            <p className="mr-4 text-lg font-recoleta color-primary">
               Contact me
             </p>
             <div className="flex items-center">
               <a href="mailto:tinadairy@gmail.com">
-                <SiGmail className="color-primary cursor-pointer" />
+                <SiGmail className="cursor-pointer color-primary" />
               </a>
               <a href="https://www.linkedin.com/in/tina-nguyen-158931207/">
-                <SiLinkedin className="color-primary mx-2 cursor-pointer" />
+                <SiLinkedin className="mx-2 cursor-pointer color-primary" />
               </a>
               <a href="https://www.instagram.com/thetinadairy/">
-                <SiInstagram className="color-primary cursor-pointer" />
+                <SiInstagram className="cursor-pointer color-primary" />
               </a>
             </div>
           </div>
         </div>
-        <div className="w-full sm:grid grid-cols-2 gap-6 flex flex-col">
+        <div className="flex flex-col w-full sm:grid grid-cols-2 gap-6">
           {projects.map(({ title, type, image, url }) => (
             <Link key={title} className="w-full" href={url ?? "/"}>
               <div className="flex flex-col text-left cursor-pointer">
-								<div className='boxshadow rounded-md w-full h-full p-2'>
+								<div className='w-full h-full p-2 boxshadow rounded-md'>
 									<Image
 										src={image}
 										placeholder="blur"
@@ -120,13 +116,12 @@ export default function Home() {
 										className="object-cover rounded-md"
 									/>
 								</div>
-                <p className="color-primary font-recoleta mt-4">{title}</p>
-                <p className="color-primary font-recoleta mb-8">{type}</p>
+                <p className="mt-4 color-primary font-recoleta">{title}</p>
+                <p className="mb-8 color-primary font-recoleta">{type}</p>
               </div>
             </Link>
           ))}
         </div>
-      </main>
-    </Layout>
+    </>
   );
 }

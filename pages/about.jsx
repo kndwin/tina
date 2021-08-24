@@ -1,13 +1,9 @@
-import Layout from "../components/layout";
-
 const About = (props) => {
   return (
-    <Layout>
-      <main className="flex-1">
-        <h1 className="font-recoleta color-primary text-3xl">About me</h1>
-      </main>
-    </Layout>
-  );
-};
+    <>
+			<h1 className="text-3xl font-recoleta color-primary">About me</h1>
+    </>
+  )
+}
 
 export default About;
