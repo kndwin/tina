@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     function onScroll () {
-      if (window.pageYOffset > 100) {
+      if (window.pageYOffset > 120) {
         setScrolledDown(true);
       } else {
         setScrolledDown(false);
@@ -49,12 +49,12 @@ const Layout = ({ children }) => {
         className={`${
           scrolledDown
             ? "fixed top-0 bg-primary text-white z-10 py-4  w-screen"
-            : "relative max-w-2xl "
+            : "relative max-w-2xl pt-8"
         } 
 					${mobileWidth ? "pt-8 pb-8" : ""}
-					py-8 flex items-center justify-center w-full 
+					flex items-center justify-center w-full 
 					transition-all duration-300 ease-in-out
-					mb-4 text-center color-primary"`}
+					text-center color-primary"`}
       >
         <h2
           className={`${scrolledDown ? "text-white static mr-20" : "color-primary absolute "} 
@@ -114,7 +114,7 @@ const Layout = ({ children }) => {
 					</>
 				)}
 			</header>
-			<main className="container flex flex-col items-center justify-center flex-1 max-w-2xl px-4 px-20 mx-auto text-center">
+			<main className="container flex flex-col items-center justify-center flex-1 max-w-2xl px-4 px-20 mx-auto">
 				{children}
 			</main>
 		</div>
