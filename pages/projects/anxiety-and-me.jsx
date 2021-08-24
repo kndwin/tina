@@ -73,6 +73,19 @@ const AnxietyAndMe = (props) => {
 						<Image src={Iteration3} placeholder='blur' />
 					</div>
 					<div className='flex flex-col w-full ml-4 sm:w-2/5'>
+						<div className='relative'>
+							<Image src={Iteration1} placeholder='blur'/>
+							<div style={{ width: '2px'}} 
+								className='absolute left-1 h-2 bg-primary' />
+							<div style={{ height: '2px', width: 'calc(100% - 10px)'}} 
+								className='absolute -bottom-2 bg-primary left-1' />
+							<div style={{ width: '2px'}} 
+								className='absolute right-1 h-2 w-1 bg-primary' />
+							<p className='absolute w-full text-center font-recoleta 
+								color-primary -bottom-10'>
+								This book was chosen
+							</p>
+						</div>
 						<p className='mx-4 mt-12 font-recoleta'>
 							The font needed to be changed into something more 
 							readable and the sub heading made to look as it if 
