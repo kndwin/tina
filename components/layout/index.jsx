@@ -49,7 +49,7 @@ const Layout = ({ children }) => {
         className={`${
           scrolledDown
             ? "fixed top-0 bg-primary text-white z-10 py-4  w-screen"
-            : "relative max-w-2xl pt-8"
+            : "relative max-w-4xl pt-8"
         } 
 					${mobileWidth ? "pt-8 pb-8" : ""}
 					flex items-center justify-center w-full 
@@ -57,9 +57,9 @@ const Layout = ({ children }) => {
 					text-center color-primary"`}
       >
         <h2
-          className={`${scrolledDown ? "text-white static mr-20" : "color-primary absolute "} 
+          className={`${scrolledDown ? "text-white static mr-20" : "color-primary"} 
 					${mobileWidth ? "absolute top-4 left-4" : ""}
-					text-4xl left-6 sm:text-5xl font-beauty top-4 sm:top-6`}
+					text-4xl left-6 sm:text-5xl font-beauty top-4 sm:top-6 sm:mr-20`}
         >
           tina dairy
         </h2>
@@ -67,13 +67,15 @@ const Layout = ({ children }) => {
 					<div className='absolute right-4'>
 						{showNav ? (
 							<div className='fixed z-10 flex flex-col items-center justify-start w-40 h-screen pt-40 transition-all duration-300 ease bg-bg -top-0 -right-1 '>
-								<Link href="/">
-									<p className={`color-primary mr-4 text-2xl cursor-pointer font-recoleta`}>
+								<Link href="/" >
+									<p onClick={() => setShowNav(false)} 
+										className={`color-primary mr-4 text-2xl cursor-pointer font-recoleta`}>
 										work
 									</p>
 								</Link>
 								<Link className="ml-4" href="/about">
-									<p className={`color-primary mr-4 text-2xl cursor-pointer font-recoleta`}>
+									<p onClick={() => setShowNav(false)} 
+										className={`color-primary mr-4 text-2xl cursor-pointer font-recoleta`}>
 										about
 									</p>
 								</Link>
@@ -114,7 +116,7 @@ const Layout = ({ children }) => {
 					</>
 				)}
 			</header>
-			<main className="container flex flex-col items-center justify-center flex-1 max-w-2xl px-4 px-20 mx-auto">
+			<main className="container flex flex-col items-center justify-center flex-1 max-w-4xl px-4 mx-auto sm:px-20">
 				{children}
 			</main>
 		</div>

@@ -59,7 +59,18 @@ const AnxietyAndMe = (props) => {
 					<Image src={BookCover3} placeholder='blur' />
 					<Image src={BookCover5} placeholder='blur' />
 					<Image src={BookCover7} placeholder='blur' />
-					<Image src={BookCover2} placeholder='blur' />
+					<div className='relative mb-8 sm:mb-0'>
+						<Image src={BookCover2} placeholder='blur' />
+						<div style={{ width: '2px'}} 
+							className='absolute h-2 left-1 bg-primary' />
+						<div style={{ height: '2px', width: 'calc(100% - 10px)'}} 
+							className='absolute -bottom-2 bg-primary left-1' />
+						<div style={{ width: '2px'}} 
+							className='absolute w-1 h-2 right-1 bg-primary' />
+						<p className='absolute w-full text-center font-recoleta color-primary -bottom-10'>
+							This iteration was chosen
+						</p>
+					</div>
 					<Image src={BookCover1} placeholder='blur' />
 				</div>
 			</div>
@@ -68,22 +79,21 @@ const AnxietyAndMe = (props) => {
 				<div className='flex flex-col w-full sm:flex-row'>
 					<div className='flex flex-col w-full sm:w-3/5 sm:grid grid-cols-2 grid-rows-2 gap-4'>
 						<Image src={Iteration5} placeholder='blur' />
-						<Image src={Iteration4} placeholder='blur' />
-						<Image src={Iteration2} placeholder='blur' />
 						<Image src={Iteration3} placeholder='blur' />
+						<Image src={Iteration1} placeholder='blur'/>
+						<Image src={Iteration4} placeholder='blur' />
 					</div>
 					<div className='flex flex-col w-full ml-4 sm:w-2/5'>
 						<div className='relative'>
-							<Image src={Iteration1} placeholder='blur'/>
+						<Image src={Iteration2} placeholder='blur' />
 							<div style={{ width: '2px'}} 
-								className='absolute left-1 h-2 bg-primary' />
+								className='absolute h-2 left-1 bg-primary' />
 							<div style={{ height: '2px', width: 'calc(100% - 10px)'}} 
 								className='absolute -bottom-2 bg-primary left-1' />
 							<div style={{ width: '2px'}} 
-								className='absolute right-1 h-2 w-1 bg-primary' />
-							<p className='absolute w-full text-center font-recoleta 
-								color-primary -bottom-10'>
-								This book was chosen
+								className='absolute w-1 h-2 right-1 bg-primary' />
+							<p className='absolute w-full text-center font-recoleta color-primary -bottom-10'>
+								This book is chosen
 							</p>
 						</div>
 						<p className='mx-4 mt-12 font-recoleta'>
@@ -99,8 +109,12 @@ const AnxietyAndMe = (props) => {
 					Final Design
 				</h1>
 				<div className='flex flex-col-reverse w-full sm:flex-row'>
+					<div className='w-full'>
 					<Image src={Final2} placeholder='blur' />
+					</div>
+					<div className='w-full'>
 					<Image src={Final1} placeholder='blur' />
+					</div>
 				</div>
 			</div>
 		</>

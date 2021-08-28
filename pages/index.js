@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Layout from "../components/layout";
-import { SiGmail, SiLinkedin, SiInstagram } from "react-icons/si";
 import Typist from "react-text-typist";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,6 +11,7 @@ import Anatomic4dPic from "../public/landing-page/anatomic4d-display.jpg";
 import OrangeSkyPic from "../public/landing-page/orange-sky-display.png";
 import LittleUnwellPic from "../public/landing-page/little-unwell-display.png";
 import MoonlightPic from "../public/landing-page/moonlight-display.jpg";
+import ContactMe from "components/contactMe";
 
 export default function Home() {
   const projects = [
@@ -83,30 +82,15 @@ export default function Home() {
                 "illustrate",
               ]}
               loop={true}
-            />
-          </h1>
-          <div className="flex items-center mt-4">
-            <p className="mr-4 text-lg font-recoleta color-primary">
-              Contact me
-            </p>
-            <div className="flex items-center">
-              <a href="mailto:tinadairy@gmail.com">
-                <SiGmail className="cursor-pointer color-primary" />
-              </a>
-              <a href="https://www.linkedin.com/in/tina-nguyen-158931207/">
-                <SiLinkedin className="mx-2 cursor-pointer color-primary" />
-              </a>
-              <a href="https://www.instagram.com/thetinadairy/">
-                <SiInstagram className="cursor-pointer color-primary" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col w-full sm:grid grid-cols-2 gap-6">
+						/>
+					</h1>
+					<ContactMe />
+				</div>
+			<div className="flex flex-col w-full sm:grid grid-cols-2 gap-6">
           {projects.map(({ title, type, image, url }) => (
             <Link key={title} className="w-full" href={url ?? "/"}>
               <div className="flex flex-col text-left cursor-pointer">
-								<div className='w-full h-full p-2 boxshadow rounded-md'>
+								<div className='w-full h-full hover:brightness-75'>
 									<Image
 										src={image}
 										placeholder="blur"
