@@ -116,7 +116,7 @@ const Layout = ({ children }) => {
 					</>
 				)}
 			</header>
-			<main className="container flex flex-col items-center justify-center flex-1 max-w-4xl px-4 mx-auto sm:px-20">
+			<main className="container flex flex-col items-center justify-center flex-1 h-full max-w-4xl px-4 mx-auto sm:px-20">
 				{children}
 			</main>
 		</div>

@@ -1,7 +1,9 @@
-import Layout from "../../components/layout";
 import Image from "next/image";
 
-import FrontCover from "../../public/anxiety-and-me/Anxiety and Me Front.png";
+import InDesign from 'components/svgs/indesign.svg'
+import Illustrator from 'components/svgs/illustrator.svg'
+import Procreate from 'components/svgs/procreate.svg'
+
 import BookCover1 from '../../public/anxiety-and-me/Initial Designs/Book Cover Drafts-01.jpg'
 import BookCover2 from '../../public/anxiety-and-me/Initial Designs/Book Cover Drafts-02.jpg'
 import BookCover3 from '../../public/anxiety-and-me/Initial Designs/Book Cover Drafts-03.jpg'
@@ -23,19 +25,28 @@ const AnxietyAndMe = (props) => {
 		<>
 			<div className="flex flex-col-reverse w-full my-8 sm:flex-row" 
 				style={{ height: 'fit-content'}}>
-				<Image
-					src={FrontCover}
-					placeholder="blur"
-					height={778}
-					width={529}
-					layout='intrinsic'
-					className="object-cover"
-				/>
+				<div className='m-6'>
+					<Image
+						src={Final1}
+						placeholder="blur"
+						height={778}
+						width={529}
+						layout='intrinsic'
+						className="object-cover"
+					/>
+				</div>
 				<div className='w-4/5 pt-8 ml-8'>
 					<h1 className="text-3xl color-primary font-recoleta">Anxiety and Me</h1>
 					<p className='font-recoleta color-primary'>Book Cover design</p>
 					<div className='mt-4 mb-2'>
-						<p className='font-recoleta color-primary'>Toolkit</p>
+						<p className='flex flex-row font-recoleta color-primary'>Toolkitk
+							<span className='flex flex-row items-center h-4 pt-2'>
+								<InDesign className='ml-2 mr-1 scale-75'/>
+								<Illustrator className='mr-1 scale-75' />
+								<Procreate className='mr-1 scale-75' />
+							</span>
+						</p>
+
 						<p className='font-recoleta color-primary'>Timeframe: 2 weeks</p>
 					</div>
 					<p className='text-sm font-recoleta'>
