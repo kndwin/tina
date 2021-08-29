@@ -31,6 +31,7 @@ export default function Home() {
       title: "Affordable Dentures and Implants",
       type: "Brand and Web Design",
       image: AffordablePic,
+			url: '/projects/affordable-dentures'
     },
     {
       title: "2022 Calendars",

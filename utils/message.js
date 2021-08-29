@@ -16,5 +16,8 @@ For this project, it required me to begin with the logo and create overall brand
 		,PAD_DESIGN: `The lab Pad is used by dental technicians and allows them to order the needed item for their patient. 
 
 The lab pad needed to be comprehensive yet simple enough to be easily  navigated.`
+	},
+	AFFORDABLE_DENTURES: {
+		INTRO: `Affordable Dentures and Implants is the clinic front of Sparx Lab and is catered towards the general public rather then dental technicians. Thus, the following brand guide focuses on a friendly and bright style.`
 	}
 }
