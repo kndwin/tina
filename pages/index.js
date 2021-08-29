@@ -7,9 +7,9 @@ import AnxietyAndMePic from "../public/landing-page/anxiety-and-me.png";
 import SparxLabPic from "../public/landing-page/sparx-lab-display.png";
 import AffordablePic from "../public/landing-page/affordable-display.png";
 import CalendarPic from "../public/landing-page/calendar-display.png";
-import Anatomic4dPic from "../public/landing-page/anatomic4d-display.jpg";
 import OrangeSkyPic from "../public/landing-page/orange-sky-display.png";
 import LittleUnwellPic from "../public/landing-page/little-unwell-display.png";
+import InfographicPic from "../public/landing-page/infographic.png";
 import MoonlightPic from "../public/landing-page/moonlight-display.jpg";
 import ContactMe from "components/contactMe";
 
@@ -37,16 +37,7 @@ export default function Home() {
       title: "2022 Calendars",
       type: "Calendar Designs",
       image: CalendarPic,
-    },
-    {
-      title: "Anatomic4d",
-      type: "Brand and Web Design",
-      image: Anatomic4dPic,
-    },
-    {
-      title: "Orange Sky Rebrand",
-      type: "Project redesignin brand",
-      image: OrangeSkyPic,
+			url: '/projects/calendars'
     },
     {
       title: "Little Unwell",
@@ -54,9 +45,21 @@ export default function Home() {
       image: LittleUnwellPic,
     },
     {
+      title: "Orange Sky Rebrand",
+      type: "Project redesignin brand",
+      image: OrangeSkyPic,
+			url: '/projects/orange-sky'
+    },
+    {
+      title: "Infographic of the Bible",
+			type: "Personal Projec",
+      image: InfographicPic,
+    },
+    {
       title: "Moonlight",
       type: "3D Modelling Lamp",
       image: MoonlightPic,
+			url: '/projects/moonlight'
     },
   ];
   return (

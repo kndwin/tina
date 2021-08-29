@@ -2,67 +2,69 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const Layout = ({ children }) => {
-  const [mobileWidth, setMobileWidth] = useState(false);
+	const [mobileWidth, setMobileWidth] = useState(false);
 
 	function getWindowDimensions() {
 		const { innerWidth: width, innerHeight: height } = window;
 		return { width, height };
 	}
 
-  useEffect(() => {
-    function handleResize() {
-      const {width, height} = getWindowDimensions();
+	useEffect(() => {
+		function handleResize() {
+			const {width, height} = getWindowDimensions();
 			setMobileWidth(width < 640)
-    }
+		}
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	}, []);
 
-  const [scrolledDown, setScrolledDown] = useState(false);
+	const [scrolledDown, setScrolledDown] = useState(false);
 
-  useEffect(() => {
-    function onScroll () {
-      if (window.pageYOffset > 120) {
-        setScrolledDown(true);
-      } else {
-        setScrolledDown(false);
-      }
-    };
-    window.addEventListener("scroll", onScroll);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, [setScrolledDown]);
+	useEffect(() => {
+		function onScroll () {
+			if (window.pageYOffset > 120) {
+				setScrolledDown(true);
+			} else {
+				setScrolledDown(false);
+			}
+		};
+		window.addEventListener("scroll", onScroll);
+		return () => {
+			window.removeEventListener("scroll", onScroll);
+		};
+	}, [setScrolledDown]);
 
-  useEffect(() => console.log({ scrolledDown }), [scrolledDown]);
+	useEffect(() => console.log({ scrolledDown }), [scrolledDown]);
 
 	const [showNav, setShowNav] = useState(false)
 
-  return (
-    <div
-      className={`flex flex-col items-center justify-center min-h-screen py-2
+	return (
+		<div
+			className={`flex flex-col items-center justify-center min-h-screen py-2
 			transition duration-300 ease
 			`}
-    >
-      <header
-        className={`${
-          scrolledDown
-            ? "fixed top-0 bg-primary text-white z-10 py-4  w-screen"
-            : "relative max-w-4xl pt-8"
-        } 
+		>
+			<header
+				className={`${
+					scrolledDown
+						? "fixed top-0 bg-primary text-white z-10 py-4  w-screen"
+						: "relative max-w-4xl pt-8"
+				} 
 					${mobileWidth ? "pt-8 pb-8" : ""}
 					flex items-center justify-center w-full 
 					transition-all duration-300 ease-in-out
 					text-center color-primary"`}
-      >
-        <h2
-          className={`${scrolledDown ? "text-white static mr-20" : "color-primary"} 
+			>
+				<Link href='/'>
+					<h2
+						className={`${scrolledDown ? "text-white static mr-20" : "color-primary"} 
 					${mobileWidth ? "absolute top-4 left-4" : ""}
-					text-4xl left-6 sm:text-5xl font-beauty top-4 sm:top-6 sm:mr-20`}
-        >
-          tina dairy
-        </h2>
+					text-4xl left-6 sm:text-5xl font-beauty top-4 sm:top-6 sm:mr-20 cursor-pointer`}
+					>
+						tina dairy
+					</h2>
+				</Link>
 				{mobileWidth ? (
 					<div className='absolute right-4'>
 						{showNav ? (
@@ -82,8 +84,8 @@ const Layout = ({ children }) => {
 								<button onClick={() => setShowNav(false)} className='absolute top-6 right-6'>
 									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M15.5 2.64275L13.3573 0.5L8 5.85725L2.64275 0.5L0.5 
-										2.64275L5.85725 8L0.5 13.3573L2.64275 15.5L8 10.1427L13.3573 
-										15.5L15.5 13.3573L10.1427 8L15.5 2.64275Z" fill="#E79696"/>
+											2.64275L5.85725 8L0.5 13.3573L2.64275 15.5L8 10.1427L13.3573 
+											15.5L15.5 13.3573L10.1427 8L15.5 2.64275Z" fill="#E79696"/>
 									</svg>
 								</button>
 							</div>

@@ -19,5 +19,24 @@ The lab pad needed to be comprehensive yet simple enough to be easily  navigated
 	},
 	AFFORDABLE_DENTURES: {
 		INTRO: `Affordable Dentures and Implants is the clinic front of Sparx Lab and is catered towards the general public rather then dental technicians. Thus, the following brand guide focuses on a friendly and bright style.`
-	}
+	},
+	CALENDARS: {
+		INTRO: `These 2022 seasonal calendars were a personal project as a lover of stationery myself. Each month was designed with to coincide with the appropriate season (Northen and Southern hemisphere).  
+
+The digital files were uploaded to my Etsy store.`
+	},
+	MOONLIGHT: {
+		INTRO_1: `Moonlight is a project that aimed to design a 3D object that could improve an existing design. 
+
+In this case, I took the lamp from IKEA and designed an attatchment which would allow the lamp to mimic the function of a moon.`
+		,INTRO_2: `The new shade will create a dimmer, diffused light that is appropriate for night-time and one that resembles the moon and stars to immerse the user into the night experience.
+
+It also serves as a moon lighting as a result since the lampshade has the appearance of a moon. Mood lighting in the shape of moons do exist, however, ‘Moonlight’ is removable and can be exchanged in and out depending on the need of the user, making it more adaptable.`
+	},
+	ORANGE_SKY: {
+		INTRO_1: `Orange Sky’s original design scheme was born out of an organic desire to serve the community.
+	
+In the redesign,  effective illustration and deliberate design choices regarding pictorial elements were placed around the redesign scheme.`
+	, INTRO_2: `Logos, icons and illustrations needed to capture the essence of reality without the noise and complexity that it brings. This was handled by designing minimal elements of the easily identifiable features of the product and abstracting the complexity by contrasting at most 3 colors at any one time.`
+		}
 }
