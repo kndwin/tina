@@ -25,6 +25,7 @@ export default function Home() {
       title: "Sparx Lab",
       type: "Brand and Web design",
       image: SparxLabPic,
+      url: "/projects/sparx-lab",
     },
     {
       title: "Affordable Dentures and Implants",

@@ -19,6 +19,7 @@ import Iteration5 from '../../public/anxiety-and-me/Iteration/Anxiety and me by 
 
 import Final1 from '../../public/anxiety-and-me/Anxiety and Me Front.png'
 import Final2 from '../../public/anxiety-and-me/Anxiety and Me Back.png'
+import {messages} from "utils/message";
 
 const AnxietyAndMe = (props) => {
 	return (
@@ -37,9 +38,9 @@ const AnxietyAndMe = (props) => {
 				</div>
 				<div className='w-4/5 pt-8 ml-8'>
 					<h1 className="text-3xl color-primary font-recoleta">Anxiety and Me</h1>
-					<p className='font-recoleta color-primary'>Book Cover design</p>
+					<p className='text-xl font-recoleta color-primary'>Book Cover design</p>
 					<div className='mt-4 mb-2'>
-						<p className='flex flex-row font-recoleta color-primary'>Toolkitk
+						<p className='flex flex-row text-xl font-recoleta color-primary'>Toolkit
 							<span className='flex flex-row items-center h-4 pt-2'>
 								<InDesign className='ml-2 mr-1 scale-75'/>
 								<Illustrator className='mr-1 scale-75' />
@@ -47,16 +48,10 @@ const AnxietyAndMe = (props) => {
 							</span>
 						</p>
 
-						<p className='font-recoleta color-primary'>Timeframe: 2 weeks</p>
+						<p className='text-xl font-recoleta color-primary'>Timeframe: 2 weeks</p>
 					</div>
-					<p className='text-sm font-recoleta'>
-						This bookcover was designed for Matthias Media for author Guan Un. 
-						The brief required a short turnover but I had creative freedom in 
-						the direction I thought best suited the books theme and content.
-						<br />
-						<br />
-						I mainly  used procreate to draw the main illustration and  drew 
-						inspiration from various different Japanese artists.
+					<p className='text-lg whitespace-pre-wrap font-manrope'>
+						{messages['ANXIETY_AND_ME']['INTRO']}
 					</p>
 				</div>
 			</div>
@@ -84,6 +79,9 @@ const AnxietyAndMe = (props) => {
 					</div>
 					<Image src={BookCover1} placeholder='blur' />
 				</div>
+				<div className='mt-12 text-xl font-manrop'>
+					{messages['ANXIETY_AND_ME']['INITIAL_DESIGN']}
+				</div>
 			</div>
 			<div className='px-4 mt-12'>
 				<h1 className='mb-4 text-3xl font-recoleta color-primary'>Iterations</h1>
@@ -107,10 +105,8 @@ const AnxietyAndMe = (props) => {
 								This book is chosen
 							</p>
 						</div>
-						<p className='mx-4 mt-12 font-recoleta'>
-							The font needed to be changed into something more 
-							readable and the sub heading made to look as it if 
-							were sinking into the whirpool
+						<p className='mx-4 mt-12 text-xl font-manrope'>
+							{messages['ANXIETY_AND_ME']['ITERATION']}
 						</p>
 					</div>
 				</div>
@@ -121,12 +117,15 @@ const AnxietyAndMe = (props) => {
 				</h1>
 				<div className='flex flex-col-reverse w-full sm:flex-row'>
 					<div className='w-full'>
-					<Image src={Final2} placeholder='blur' />
+						<Image src={Final1} placeholder='blur' />
 					</div>
 					<div className='w-full'>
-					<Image src={Final1} placeholder='blur' />
+						<Image src={Final2} placeholder='blur' />
 					</div>
 				</div>
+				<p className='mb-12 text-xl font-manrope'>
+					{messages['ANXIETY_AND_ME']['FINAL']}
+				</p>
 			</div>
 		</>
 	)
