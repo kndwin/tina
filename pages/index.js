@@ -47,7 +47,7 @@ export default function Home() {
     },
     {
       title: "Orange Sky Rebrand",
-      type: "Project redesignin brand",
+      type: "Project redesigning brand",
       image: OrangeSkyPic,
 			url: '/projects/orange-sky'
     },
