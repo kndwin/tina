@@ -43,6 +43,7 @@ export default function Home() {
       title: "Little Unwell",
       type: "Project about Mental Health awareness",
       image: LittleUnwellPic,
+			url: '/error'
     },
     {
       title: "Orange Sky Rebrand",
@@ -52,8 +53,9 @@ export default function Home() {
     },
     {
       title: "Infographic of the Bible",
-			type: "Personal Projec",
+			type: "Personal Project",
       image: InfographicPic,
+			url: '/error'
     },
     {
       title: "Moonlight",
